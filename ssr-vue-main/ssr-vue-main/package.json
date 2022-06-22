@@ -1,0 +1,35 @@
+{
+  "name": "ssr-vue",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "dev:ssr": "cross-env NODE_ENV=development node server",
+    "prod:ssr": "cross-env NODE_ENV=production node server",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "build:client": "vite build --outDir dist/client --ssrManifest",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.ts ",
+    "build:ssr":"npm run build:client && npm run build:server"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "element-plus": "^2.1.4",
+    "vue": "^3.2.25",
+    "vue-i18n": "^9.2.0-beta.25",
+    "vue-router": "^4.0.13",
+    "vuex": "^4.0.2",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.3",
+    "sass": "^1.49.9",
+    "typescript": "^4.5.4",
+    "unplugin-auto-import": "^0.6.6",
+    "unplugin-vue-components": "^0.18.3",
+    "vite": "^2.8.0",
+    "vue-tsc": "^0.29.8"
+  }
+}

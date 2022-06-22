@@ -1,0 +1,26 @@
+body,html{
+    margin:0;
+    padding: 0;
+}
+
+.container {
+    min-height: calc(100vh - 322px - 80px);
+}
+
+.el-pagination{
+    text-align: center;
+    margin:20px auto;
+}
+
+.loading-block{
+    @include placeholder-order(center);
+  }
+  .mask{
+    position:fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10;
+    left:0;
+    top:0;
+    height: 100%;
+  }
